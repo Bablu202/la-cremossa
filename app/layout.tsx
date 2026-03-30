@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Playfair_Display } from "next/font/google";
+import { Inter, Italiana } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({
@@ -7,13 +7,14 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
-const playfair = Playfair_Display({
-  variable: "--font-playfair",
+const italiana = Italiana({
+  variable: "--font-italiana",
   subsets: ["latin"],
+  weight: "400",
 });
 
 export const metadata: Metadata = {
-  title: "la-cremossa | cremig bis zum letzen Bissen",
+  title: "la-cremossa",
   description: "Discover our handmade, creamy premium cheesecakes, prepared with love and passion. Perfect for any occasion!",
 };
 
@@ -25,7 +26,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${playfair.variable} h-full antialiased`}
+      className={`${inter.variable} ${italiana.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>

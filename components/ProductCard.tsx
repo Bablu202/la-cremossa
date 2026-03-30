@@ -15,35 +15,36 @@ interface ProductCardProps {
 
 export default function ProductCard({ product, onOrder }: ProductCardProps) {
   return (
-    <div className="flex flex-col items-center bg-[var(--bg-secondary)] rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 transform hover:-translate-y-2 p-6 border border-[var(--text-muted)]/10 group cursor-pointer w-full max-w-[320px] mx-auto overflow-hidden">
-      <div className="relative w-48 h-48 mb-6 transition-transform duration-500 group-hover:scale-110 drop-shadow-md group-hover:drop-shadow-xl flex items-center justify-center">
+    <div className="flex flex-col bg-[var(--bg-secondary)] shadow-sm hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 border-[0.5px] border-[var(--text-muted)]/20 group cursor-pointer w-full max-w-[360px] mx-auto overflow-hidden rounded-md">
+      {/* Full width image container, less padding */}
+      <div className="relative w-full h-64 bg-black/5 overflow-hidden flex items-center justify-center p-4">
         <Image 
           src={product.image} 
           alt={product.name} 
-          width={180}
-          height={180}
-          className="object-contain w-[180px] h-[180px]" 
+          fill
+          className="object-contain transition-transform duration-700 group-hover:scale-105 drop-shadow-md" 
         />
       </div>
       
-      <div className="text-center w-full">
-        <h3 className="text-2xl font-bold font-playfair mb-2 text-[var(--text-main)] transition-colors group-hover:text-[var(--accent)]">{product.name}</h3>
-        <p className="text-[var(--text-muted)] text-sm mb-4 font-medium">{product.servings} Servings</p>
+      <div className="p-6 flex flex-col items-center text-center w-full">
+        <h3 className="text-2xl font-bold font-italiana mb-1 text-[var(--text-main)] transition-colors group-hover:text-[var(--accent)]">{product.name}</h3>
+        <p className="text-[var(--text-muted)] text-sm mb-6 tracking-wide uppercase text-xs">{product.servings} Servings</p>
         
-        <div className="flex items-center justify-between w-full border-t border-[var(--text-muted)]/10 pt-4 mt-2">
-          <span className="text-2xl font-bold text-[var(--price-color)]">{product.price}€</span>
+        <div className="flex items-center justify-between w-full mt-auto">
+          <span className="text-2xl font-light text-[var(--price-color)]">{product.price}€</span>
           
           <button 
             onClick={(e) => {
               e.stopPropagation();
               onOrder(product);
             }}
-            className="px-5 py-2 bg-[var(--accent)] text-white font-bold rounded-full hover:bg-[var(--accent-hover)] transition-all shadow-sm hover:shadow-md transform active:scale-95"
+            className="px-6 py-2.5 bg-transparent border-[0.5px] border-[var(--text-main)] text-[var(--text-main)] font-medium text-sm tracking-wide uppercase hover:bg-[var(--text-main)] hover:text-[var(--bg-primary)] transition-all duration-300"
           >
-            Order Now
+            Order
           </button>
         </div>
       </div>
     </div>
   );
 }
+

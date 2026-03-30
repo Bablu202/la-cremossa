@@ -7,13 +7,12 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative w-full min-h-[90vh] flex flex-col items-center pt-24 pb-12 px-4 selection:bg-[var(--accent)] selection:text-white">
         
-        <div className="z-10 text-center flex flex-col items-center mt-8 space-y-4 max-w-4xl mx-auto">
-          <h1 className="text-6xl md:text-8xl lg:text-9xl font-playfair font-black tracking-tight text-[var(--text-main)] drop-shadow-sm mb-2 opacity-90 title-gradient uppercase">
+        <div className="z-10 text-center flex flex-col items-center mt-8 space-y-2 max-w-4xl mx-auto">
+          <h1 className="text-6xl md:text-8xl lg:text-9xl font-italiana font-black tracking-tight text-[var(--text-main)] drop-shadow-sm mb-4 opacity-90 uppercase">
             la-cremossa
           </h1>
-          <p className="text-xl md:text-3xl font-playfair italic text-[var(--text-muted)] tracking-wide font-medium relative inline-block">
+          <p className="text-2xl md:text-4xl font-italiana italic text-[var(--accent)] tracking-wide relative inline-block">
             <span className="relative z-10">cremig bis zum letzen Bissen</span>
-            <span className="absolute -bottom-2 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[var(--accent)] to-transparent opacity-60"></span>
           </p>
         </div>
 
@@ -30,7 +29,7 @@ export default function Home() {
 
       {/* Description Section */}
       <section className="w-full max-w-3xl mx-auto text-center px-6 py-24 relative z-10">
-        <p className="text-2xl md:text-4xl text-[var(--text-main)] font-playfair leading-relaxed drop-shadow-sm">
+        <p className="text-3xl md:text-5xl text-[var(--text-main)] font-italiana leading-relaxed drop-shadow-sm">
           Discover our handmade, <span className="text-[var(--accent)] font-bold italic">creamy premium cheesecakes</span>, prepared with love and passion. Perfect for any occasion!
         </p>
       </section>
@@ -41,7 +40,7 @@ export default function Home() {
       {/* Footer */}
       <footer className="w-full py-12 mt-12 border-t border-[var(--text-muted)]/10 text-center text-sm text-[var(--text-muted)] mt-auto z-10 bg-[var(--bg-secondary)] relative">
         <p>© {new Date().getFullYear()} la-cremossa. All rights reserved.</p>
-        <p className="mt-2 text-[var(--accent)] font-playfair italic">cremig bis zum letzen Bissen</p>
+        <p className="mt-2 text-[var(--accent)] font-italiana text-2xl tracking-wide italic">cremig bis zum letzen Bissen</p>
       </footer>
     </main>
   );

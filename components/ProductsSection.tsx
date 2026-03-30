@@ -24,11 +24,11 @@ export default function ProductsSection() {
   return (
     <section className="py-20 px-4 w-full max-w-6xl mx-auto relative z-10" id="products">
       <div className="text-center mb-16">
-        <h2 className="text-4xl md:text-5xl font-playfair font-bold text-[var(--accent)] mb-4">Our Selection</h2>
-        <div className="w-24 h-1 bg-gradient-to-r from-transparent via-[var(--accent)] to-transparent mx-auto rounded-full mix-blend-multiply"></div>
+        <h2 className="text-4xl md:text-5xl font-italiana font-bold text-[var(--text-main)] mb-4 uppercase tracking-widest">Our Selection</h2>
+        <div className="w-24 h-[1px] bg-[var(--text-muted)] mx-auto opacity-30 mt-6"></div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 justify-items-center">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 justify-items-center">
         {products.map((product) => (
           <ProductCard 
             key={product.id} 
@@ -47,3 +47,4 @@ export default function ProductsSection() {
     </section>
   );
 }
+

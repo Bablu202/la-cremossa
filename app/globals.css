@@ -1,32 +1,36 @@
 @import "tailwindcss";
 
-:root {
-  /* Brand Colors */
-  --bg-primary: #fcf9f2; /* Creamy off-white */
-  --bg-secondary: #fffefb; /* Lighter cream for cards */
-  --text-main: #2b1810; /* Dark chocolate brown */
-  --text-muted: #5c433b; /* Medium brown */
-  --accent: #d4a373; /* Golden caramel/crust color */
-  --accent-hover: #c49262; /* Slightly darker golden */
-  --price-color: #8a5a44; /* Warm reddish brown */
+@theme inline {
+  --font-inter: var(--font-inter);
+  --font-italiana: var(--font-italiana);
+}
 
-  /* Shadows */
-  --shadow-sm: 0 4px 6px rgba(43, 24, 16, 0.05);
-  --shadow-md: 0 10px 15px rgba(43, 24, 16, 0.1);
-  --shadow-lg: 0 20px 25px rgba(43, 24, 16, 0.15);
-  --shadow-glass: 0 8px 32px 0 rgba(43, 24, 16, 0.15);
+:root {
+  /* Sleek Modern Brand Colors */
+  --bg-primary: #fdfbf7; /* Very clean, warm off-white */
+  --bg-secondary: #ffffff;
+  --text-main: #1a1a1a; /* Very dark grey, almost black */
+  --text-muted: #666666; /* Clean grey */
+  --accent: #d8a067; /* Refined golden caramel */
+  --accent-hover: #c48c53;
+  --price-color: #1a1a1a; /* Keep prices sleek black */
+
+  /* Modern Subtle Shadows */
+  --shadow-sm: 0 4px 14px 0 rgba(0, 0, 0, 0.03);
+  --shadow-md: 0 10px 30px 0 rgba(0, 0, 0, 0.05);
+  --shadow-lg: 0 20px 40px 0 rgba(0, 0, 0, 0.08);
+  --shadow-glass: 0 8px 32px 0 rgba(0, 0, 0, 0.05);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    /* Even in dark mode, we want a warm dessert feel, like dark chocolate */
-    --bg-primary: #1a110a; 
-    --bg-secondary: #2b1c11;
-    --text-main: #fcf9f2;
-    --text-muted: #dccbc1;
-    --accent: #e5b687;
+    --bg-primary: #0f0f0f;
+    --bg-secondary: #141414;
+    --text-main: #f5f5f5;
+    --text-muted: #a3a3a3;
+    --accent: #e4b37f;
     --accent-hover: #f3c79b;
-    --price-color: #f0a381;
+    --price-color: #f5f5f5;
   }
 }
 
@@ -45,10 +49,6 @@ body {
   font-family: var(--font-inter), sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-playfair), serif;
-}
-
 * {
   box-sizing: border-box;
 }
@@ -60,27 +60,15 @@ a {
 
 /* Glassmorphism utilities */
 .glass {
-  background: rgba(255, 255, 255, 0.25);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(0, 0, 0, 0.05);
   box-shadow: var(--shadow-glass);
 }
 @media (prefers-color-scheme: dark) {
   .glass {
-    background: rgba(43, 28, 17, 0.4);
+    background: rgba(20, 20, 20, 0.85);
     border: 1px solid rgba(255, 255, 255, 0.05);
-  }
-}
-
-.title-gradient {
-  background: linear-gradient(135deg, var(--text-main) 0%, var(--accent) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-@media (prefers-color-scheme: dark) {
-  .title-gradient {
-    background: linear-gradient(135deg, #fff 0%, var(--accent) 100%);
   }
 }
