@@ -1,16 +1,15 @@
 import type { Metadata } from "next";
-import { Montserrat, Italiana } from "next/font/google";
+import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
 
-const montserrat = Montserrat({
-  variable: "--font-montserrat",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
 });
 
-const italiana = Italiana({
-  variable: "--font-italiana",
+const playfair = Playfair_Display({
+  variable: "--font-playfair",
   subsets: ["latin"],
-  weight: "400",
 });
 
 export const metadata: Metadata = {
@@ -26,7 +25,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${montserrat.variable} ${italiana.variable} h-full antialiased`}
+      className={`${inter.variable} ${playfair.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
