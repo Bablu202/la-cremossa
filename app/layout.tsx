@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Italiana } from "next/font/google";
+import { Inter, Great_Vibes } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({
@@ -7,15 +7,15 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
-const italiana = Italiana({
-  variable: "--font-italiana",
+const germanyScript = Great_Vibes({
+  variable: "--font-germany",
   subsets: ["latin"],
   weight: "400",
 });
 
 export const metadata: Metadata = {
   title: "la-cremossa",
-  description: "Discover our handmade, creamy premium cheesecakes, prepared with love and passion. Perfect for any occasion!",
+  description: "cremig bis zum letzen Bissen",
 };
 
 export default function RootLayout({
@@ -26,7 +26,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${italiana.variable} h-full antialiased`}
+      className={`${inter.variable} ${germanyScript.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>

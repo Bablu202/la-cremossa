@@ -8,10 +8,10 @@ export default function Home() {
       <section className="relative w-full min-h-[90vh] flex flex-col items-center pt-24 pb-12 px-4 selection:bg-[var(--accent)] selection:text-white">
         
         <div className="z-10 text-center flex flex-col items-center mt-8 space-y-2 max-w-4xl mx-auto">
-          <h1 className="text-6xl md:text-8xl lg:text-9xl font-italiana font-black tracking-tight text-[var(--text-main)] drop-shadow-sm mb-4 opacity-90 uppercase">
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-germany font-normal tracking-wide text-[var(--text-main)] drop-shadow-sm mb-4 opacity-90">
             la-cremossa
           </h1>
-          <p className="text-2xl md:text-4xl font-italiana italic text-[var(--accent)] tracking-wide relative inline-block">
+          <p className="text-2xl md:text-4xl font-germany text-[var(--accent)] tracking-wide relative inline-block">
             <span className="relative z-10">cremig bis zum letzen Bissen</span>
           </p>
         </div>
@@ -29,8 +29,8 @@ export default function Home() {
 
       {/* Description Section */}
       <section className="w-full max-w-3xl mx-auto text-center px-6 py-24 relative z-10">
-        <p className="text-3xl md:text-5xl text-[var(--text-main)] font-italiana leading-relaxed drop-shadow-sm">
-          Discover our handmade, <span className="text-[var(--accent)] font-bold italic">creamy premium cheesecakes</span>, prepared with love and passion. Perfect for any occasion!
+        <p className="text-3xl md:text-5xl text-[var(--text-main)] font-germany leading-relaxed drop-shadow-sm">
+          Discover our handmade, <span className="text-[var(--accent)] font-medium">creamy premium cheesecakes</span>, prepared with love and passion. Perfect for any occasion!
         </p>
       </section>
 
@@ -40,7 +40,7 @@ export default function Home() {
       {/* Footer */}
       <footer className="w-full py-12 mt-12 border-t border-[var(--text-muted)]/10 text-center text-sm text-[var(--text-muted)] mt-auto z-10 bg-[var(--bg-secondary)] relative">
         <p>© {new Date().getFullYear()} la-cremossa. All rights reserved.</p>
-        <p className="mt-2 text-[var(--accent)] font-italiana text-2xl tracking-wide italic">cremig bis zum letzen Bissen</p>
+        <p className="mt-2 text-[var(--accent)] font-germany text-3xl tracking-wide">cremig bis zum letzen Bissen</p>
       </footer>
     </main>
   );

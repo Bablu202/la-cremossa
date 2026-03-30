@@ -24,7 +24,7 @@ export default function ProductsSection() {
   return (
     <section className="py-20 px-4 w-full max-w-6xl mx-auto relative z-10" id="products">
       <div className="text-center mb-16">
-        <h2 className="text-4xl md:text-5xl font-italiana font-bold text-[var(--text-main)] mb-4 uppercase tracking-widest">Our Selection</h2>
+        <h2 className="text-5xl md:text-6xl font-germany font-normal text-[var(--text-main)] mb-4 tracking-wide">Our Selection</h2>
         <div className="w-24 h-[1px] bg-[var(--text-muted)] mx-auto opacity-30 mt-6"></div>
       </div>
 
@@ -47,4 +47,5 @@ export default function ProductsSection() {
     </section>
   );
 }
+
 
